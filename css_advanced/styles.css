@@ -6,7 +6,7 @@
   --accent: #c271ff; /* purple */
   --primary: #c271ff;
   --text: #111827;
-  --muted: #9aa5b1;
+  --muted: #6b7280;
   --white: #ffffff;
 }
 body { font-family: 'Source Sans Pro', Arial, sans-serif; color: var(--text); line-height: 1.6; background:#fff; }
@@ -51,16 +51,15 @@ body { font-family: 'Source Sans Pro', Arial, sans-serif; color: var(--text); li
 .features p { color: #97a6b5; font-size: 14px; line-height: 1.6; }
 .membership .cta { margin-top: 8px; padding: 12px 24px; background: var(--accent); color: var(--white); border-radius: 999px; box-shadow: 0 10px 24px rgba(194,113,255,.25); }
 
-/* Sections below (unchanged baseline) */
-.popular { padding: 56px 24px; max-width: 1100px; margin: 0 auto; }
-.popular h2 { text-align: center; margin-bottom: 24px; }
-.card-grid { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.card img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; }
-.card h3 { margin-top: 8px; font-size: 18px; }
-
-.faq { padding: 56px 24px; max-width: 1100px; margin: 0 auto; }
-.faq h2 { text-align: center; margin-bottom: 24px; }
-.faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+/* FAQ */
+.faq { position: relative; padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+.faq::before, .faq::after { content: ""; position: absolute; left: 0; right: 0; height: 14px; background: #0b1220; }
+.faq::before { top: 0; transform: translateY(-80px); }
+.faq::after { bottom: 0; transform: translateY(80px); }
+.faq h2 { text-align: center; font-size: 36px; letter-spacing: 2px; font-weight: 700; color: #2a3441; margin-bottom: 36px; }
+.faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 44px 60px; }
+.faq article h3 { font-size: 14px; color: #2a3441; margin-bottom: 10px; font-weight: 700; }
+.faq article p { color: var(--muted); font-size: 14px; line-height: 1.8; }
 
 .site-footer { background: #0b1220; color: #cbd5e1; padding: 24px; display: flex; align-items: center; justify-content: space-between; }
 .site-footer .social { list-style: none; display: flex; gap: 12px; }
@@ -75,4 +74,5 @@ body { font-family: 'Source Sans Pro', Arial, sans-serif; color: var(--text); li
   .hero-avatars img { width: 64px; height: 64px; }
   .quote-content { grid-template-columns: 1fr; text-align: center; }
   .features { grid-template-columns: 1fr 1fr; }
+  .faq-grid { grid-template-columns: 1fr; gap: 28px; }
 }
