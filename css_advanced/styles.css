@@ -1,0 +1,50 @@
+/* Minimal scaffold styles for css_advanced */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg-dark: #0d1b2a;
+  --bg-hero: #1f2937;
+  --accent: #a78bfa;
+  --primary: #6c5ce7;
+  --text: #111827;
+}
+body { font-family: 'Source Sans Pro', Arial, sans-serif; color: var(--text); line-height: 1.6; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
+.nav-list { list-style: none; display: flex; gap: 16px; }
+.nav a { text-decoration: none; color: #111; font-weight: 600; }
+.brand { font-size: 24px; }
+
+.hero { background: linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.6)), url('images/hero.jpg') center/cover no-repeat; color: #fff; padding: 96px 24px; text-align: center; }
+.hero h1 { font-size: 56px; font-weight: 900; margin-bottom: 8px; }
+.hero .subtitle { opacity: .9; margin-bottom: 24px; }
+.btn { display: inline-block; padding: 12px 20px; border-radius: 999px; text-decoration: none; }
+.btn.primary { background: var(--primary); color: #fff; }
+.btn.secondary { background: var(--accent); color: #111; }
+.hero-avatars { list-style: none; display: flex; justify-content: center; gap: 24px; margin-top: 32px; }
+.hero-avatars img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; }
+
+.quote { background: #b085f5; color: #fff; padding: 40px 24px; display: grid; place-items: center; text-align: center; }
+.quote-avatar { width: 72px; height: 72px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 12px; object-fit: cover; }
+
+.popular { padding: 56px 24px; max-width: 1100px; margin: 0 auto; }
+.popular h2 { text-align: center; margin-bottom: 24px; }
+.card-grid { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.card img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; }
+.card h3 { margin-top: 8px; font-size: 18px; }
+
+.membership { background: var(--bg-dark); color: #e5e7eb; padding: 56px 24px; text-align: center; }
+.membership h2 { margin-bottom: 24px; color: #fff; }
+.features { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto 24px; }
+
+.faq { padding: 56px 24px; max-width: 1100px; margin: 0 auto; }
+.faq h2 { text-align: center; margin-bottom: 24px; }
+.faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+.site-footer { background: #0b1220; color: #cbd5e1; padding: 24px; display: flex; align-items: center; justify-content: space-between; }
+.site-footer .social { list-style: none; display: flex; gap: 12px; }
+.site-footer a { color: #cbd5e1; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .features { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+}
