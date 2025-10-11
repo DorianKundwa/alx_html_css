@@ -1,0 +1,63 @@
+/* 7-styles.css - Headphones landing page, with fun animations */
+/* ---- Fun Animations for Features & Results ---- */
+/* Features bounce in always & pulse-icons on hover */
+.feature-block {
+  animation: bounceIn 1.18s cubic-bezier(.32,1.56,.77,.88);
+  transition: transform 0.24s cubic-bezier(.32,2,.65,.8),
+              box-shadow 0.18s, filter 0.18s;
+}
+.feature-block:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(255,101,101,0.14);
+  filter: brightness(1.07) saturate(110%);
+  z-index: 1;
+}
+.feature-block .feature-icon {
+  transition: transform 0.28s cubic-bezier(.39,1.61,.53,.97);
+}
+.feature-block:hover .feature-icon {
+  animation: pulse 0.58s 1;
+  transform: scale(1.22) rotate(-10deg);
+}
+@keyframes bounceIn {
+  0% { opacity:0; transform: scale(0.7) translateY(42px); }
+  50% { opacity:1; transform: scale(1.09) translateY(-10px); }
+  65% { transform: scale(0.97) translateY(3px) rotate(-3deg); }
+  85% { transform: scale(1.04) translateY(-2px) rotate(2deg); }
+  100% { opacity:1; transform: scale(1) translateY(0); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.22) rotate(-12deg); }
+  70% { transform: scale(0.95) rotate(7deg); }
+  100% { transform: scale(1); }
+}
+/* Results perpetual floating and scale on hover */
+.result-block {
+  animation: floatUp 3.1s ease-in-out infinite alternate;
+  transition: transform 0.18s cubic-bezier(.32,2,.65,.8),
+    box-shadow 0.12s, filter 0.14s;
+}
+.result-block:hover {
+  transform: scale(1.09) rotate(2deg);
+  box-shadow: 0 12px 36px rgba(255,101,101,0.18);
+  filter: brightness(1.04) saturate(120%);
+  z-index: 2;
+}
+.result-block .result-icon {
+  transition: transform 0.28s cubic-bezier(.43,1.41,.51,.98);
+}
+.result-block:hover .result-icon {
+  transform: scale(1.18) rotate(8deg);
+  animation: spinIcon 0.64s 1 linear;
+}
+@keyframes floatUp {
+  from { transform: translateY(0); }
+  50% { transform: translateY(-17px) scale(0.975) rotate(-2deg); }
+  to { transform: translateY(0); }
+}
+@keyframes spinIcon {
+  0% { transform: rotate(0deg); }
+  70% { transform: rotate(34deg) scale(1.13); }
+  100% { transform: rotate(0deg) scale(1.18); }
+}
