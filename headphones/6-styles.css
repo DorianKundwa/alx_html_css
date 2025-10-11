@@ -1,0 +1,34 @@
+/* 6-styles.css - Headphones landing page, CSS pentagon for results */
+/* Pentagon shape for Results Section */
+.pentagon {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  margin-bottom: 18px;
+  transition: background 0.17s;
+  box-shadow: 0 4px 8px rgba(255,101,101,0.13);
+}
+.pentagon-alt {
+  background: #36d895;
+}
+.pentagon-accent {
+  background: #ffbe55;
+}
+/* Adjust position in results */
+.result-block {
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .pentagon {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 480px) {
+  .pentagon {
+    width: 38px;
+    height: 38px;
+  }
+}
