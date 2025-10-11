@@ -1,0 +1,98 @@
+/* 4-styles.css - Headphones landing page, FINAL */
+
+/* Footer Section */
+.site-footer {
+  background: #161616;
+  color: #fff;
+  padding: 0 0 0 0;
+  font-size: 1rem;
+}
+.footer-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 38px 0 22px 0;
+  flex-wrap: wrap;
+}
+.footer-brand .logo img {
+  height: 32px;
+  vertical-align: middle;
+}
+.footer-nav ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+  opacity: 0.88;
+}
+.footer-nav a:hover,
+.footer-nav a:active {
+  color: var(--color-primary);
+  opacity: 1;
+}
+.footer-social {
+  display: flex;
+  gap: 22px;
+}
+.social-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 0.87;
+  transition: color 0.2s, opacity 0.18s;
+  text-decoration: none;
+  display: inline-block;
+}
+.social-icon:hover,
+.social-icon:active {
+  color: var(--color-primary);
+  opacity: 1;
+}
+.footer-bottom {
+  border-top: 1px solid #242424;
+  text-align: center;
+  padding: 18px 0 12px 0;
+  font-size: 0.97rem;
+  color: #bbbbbb;
+  opacity: 0.83;
+}
+@media (max-width: 800px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0 13px 0;
+    gap: 15px;
+  }
+  .footer-nav ul {
+    gap: 16px;
+  }
+  .footer-social {
+    gap: 13px;
+  }
+}
+@media (max-width: 480px) {
+  .footer-main {
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px 0 9px 0;
+  }
+  .footer-brand {
+    margin-bottom: 12px;
+  }
+  .footer-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+  .footer-bottom {
+    font-size: 0.9rem;
+    padding: 10px 0 7px 0;
+  }
+}
